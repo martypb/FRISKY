@@ -17,57 +17,28 @@
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
     <![endif]-->
+
+    <style>
+    .hide
+    {
+      display:none;
+    }
+    </style>
+
   </head>
   <body>
     <div class="container">
       <div class="demo-headline">
         <h1 class="demo-logo">
-          John Bauer
+          [YOUR NAME]
           <small>What risk profile are you?</small>
         </h1>
       </div> <!-- /demo-headline -->
 
-      <h1></h1>
-
-      <div class="row demo-row">
-        <div class="span3">
-            <p align="center" data-toggle="tooltip" title="An investor who seeks to protect their accumulated wealth and only prepared to accept a relatively low level of risk"></p>
-          <a href="#fakelink" class="btn btn-large btn-block btn-disabled">CONSERVATIVE</a>
-        </div>
-        <div class="span3">
-            <p align="center" data-toggle="tooltip" title="Should be stable in value over a 3-year period, but could fall in value by 5-10% within a year. Over the long term provide a return of 6-8%"></p>
-          <a href="#fakelink" class="btn btn-large btn-block btn-disabled">BALANCED</a>
-        </div>
-        <div class="span3">
-            <p align="center" data-toggle="tooltip" title="Could provide growth of 8-10% over the long term. Could fall by as much as 20% in value"></p>
-          <a href="#fakelink" class="btn btn-large btn-block btn-disabled">GROWTH</a>
-        </div>
-        <div class="span3">
-            <p align="center" data-toggle="tooltip" title="Could provide returns of greater than 10% over the long term. The flip side is that in any one year it could fall by greater than 20% in value."></p>
-          <a href="#fakelink" class="btn btn-large btn-block btn-success">AGGRESSIVE</a>
-        </div>
-      </div> <!-- /row -->
-
-      <div class="row demo-row">
-        <div class="span3">
-          <img class="image" src="./images/demo/Frisky.PNG" />
-        </div>
-        <div class="span3">
-          <img class="image" src="./images/demo/Frisky.PNG" />
-        </div>
-        <div class="span3">
-          <img class="image" src="./images/demo/Frisky.PNG" />
-        </div>
-        <div class="span3">
-          <img class="image" src="./images/demo/Frisky.PNG" />
-        </div>
-      </div> <!-- /row -->
-
-
       <div class="row demo-row">
 
 
-        <div class="span12">
+        <div class="span12 hide alert-success" id="conservative_text">
           <div class="demo-text-box prl">
             <h3 class="demo-panel-title">Congratulations! You've earned the John Howard badge for being conservative</h3>
             <p>As a conservative investor your primary investment goal is long-term capital growth.</p>
@@ -80,7 +51,7 @@
       <div class="row demo-row">
 
 
-        <div class="span12">
+        <div class="span12 hide alert-success" id="balanced_text">
           <div class="demo-text-box prl">
             <h3 class="demo-panel-title">Congratulations! You've earned the Judge Judy badge for being balanced</h3>
             <p>As a balanced investor your primary investment goal is long-term capital growth.</p>
@@ -90,7 +61,7 @@
       </div>
 
 
-      <div class="row demo-row">
+      <div class="row demo-row hide alert-success" id="growth_text">
 
 
         <div class="span12">
@@ -103,47 +74,100 @@
       </div>
 
 
-      <div class="row demo-row">
+      <div class="row demo-row hide alert-success" id="aggressive_text">
 
 
         <div class="span12">
           <div class="demo-text-box prl">
             <h3 class="demo-panel-title">Congratulations! You've earned the Tom Cruise badge for risky business</h3>
             <p>As an aggressive investor your primary investment goal is long-term capital growth.</p>
-            <p>You can tolerate substantial fluctuations in the value of your investment in the short-term in anticipation of the highest possible return over 10 years or more.</p>
             <p>You're willing to take risks, but sometimes you are going to benefit from an extra set of eyes. Contact a CommSec Advisor to make sure you are not over-extending yourself.</p>
           </div>
         </div> <!-- /text box -->
       </div>
 
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="span6">
-            <h4 class="footer-title">Curious to know how risky your friends are?</h4>
-            <p>Share this link<br/>
-              <br/>
-              Go to: <a href="https://www.comsec.com.au/" target="_blank">CommSec</a>
-            </p>
-          </div> <!-- /span8 -->
-
-          <div class="span6">
-            <div class="footer-banner">
-              <h4 class="footer-title">CommSec Financial Advisors</h4>
-              <ul>
-                <li>Proven track record</li>
-                <li>Customer focussed</li>
-                <li>Wealth of experience</li>
-                <li>Professional support team</li>
-                <li>Simple &amp; friendly service</li>
-              </ul>
-            </div>
-          </div>
+      <div class="row demo-row">
+        <div class="span3">
+            <a href="#" class="btn btn-large btn-block btn-disabled conservativebutton">CONSERVATIVE</a>
         </div>
-      </div>
-    </footer>
+        <div class="span3">
+            <a href="#" class="btn btn-large btn-block btn-disabled balancedbutton">BALANCED</a>
+        </div>
+        <div class="span3">
+            <a href="#" class="btn btn-large btn-block btn-disabled growthbutton">GROWTH</a>
+        </div>
+        <div class="span3">
+            <a href="#" class="btn btn-large btn-block btn-success aggressivebutton">AGGRESSIVE</a>
+        </div>
+      </div> <!-- /row -->
+
+      <div class="row demo-row">
+        <div class="span3">
+          <img class="image" src="images/demo/conservative.JPG" id="conservative_pic"/>
+        </div>
+        <div class="span3">
+          <img class="image" src="images/demo/balanced.JPG" id="balanced_pic"/>
+        </div>
+        <div class="span3">
+          <img class="image" src="images/demo/growth.JPG" id="growth_pic"/>
+        </div>
+        <div class="span3">
+          <img class="image" src="images/demo/aggressive.JPG" id="aggressive_pic"/>
+        </div>
+      </div> <!-- /row -->
+      <div class="row demo-row">
+        <div class="span3" id="conservative_text2">
+            An investor who seeks to protect their accumulated wealth and only prepared to accept a relatively low level of risk
+        </div>
+        <div class="span3" id="balanced_text2">
+          Should be stable in value over a 3-year period, but could fall in value by 5-10% within a year. Over the long term provide a return of 6-8%
+        </div>
+        <div class="span3" id="growth_text2">
+          Could provide growth of 8-10% over the long term. Could fall by as much as 20% in value
+        </div>
+        <div class="span3" id="aggressive_text2">
+          Could provide returns of greater than 10% over the long term. The flip side is that in any one year it could fall by greater than 20% in value
+        </div>
+      </div> <!-- /row -->
+      <hr>
+      <div class="">
+        <h1 class="text-center">
+          2 financial advisors found <small>matching your risk personality and stated financial goals</small>
+        </h1>
+      </div> <!-- /demo-headline -->
+
+      <div class="row demo-row alert-info">
+        <div class="span3">
+          <img class="image" src="http://www.australianunitypfs.com.au/SiteCollectionImages/Consultants/Mark%20Oliver.jpg" />
+          <p>Contact Mark Oliver to find out how you can create a more secure financial future.</p>
+          <p><strong>Email: </strong><a href="mailto:m.butler@cba.com.au">mark.oliver@cba.com.au</a></p>
+          <p><strong>Phone: </strong>+612 9999 9999</p>
+        </div>
+        <div class="span9">
+          <h3>Mark Oliver</h3>
+          <p>Mark Oliver* is a financial adviser with over 10 years experience in working with clients to create secure financial futures. Mark is also the National Manager – Risk Insurance of Australian Unity Personal Financial Services. In addition to heading up the Risk Insurance for the Australian Unity Financial Planning Dealer group, Mark specialises in developing strategic financial plans for clients who are looking for advice in the following areas</p>
+          <p>Mark’s clients value him as a well-credentialed, trusted adviser who has a lifetime commitment to his clients’ financial well-being.</p>
+          <p class="text-right"><a href="mailto:m.butler@cba.com.au" class="btn btn-info";>Email Mark now</a>&nbsp;&nbsp;</p>
+        </div>
+      </div> <!-- /row -->
+
+      <div class="row demo-row alert-info">
+        <div class="span3">
+          <img class="image" src="http://www.australianunitypfs.com.au/SiteCollectionImages/Consultants/Andrew%20Cunich.JPG" />
+          <p>Contact Andrew Cunich to find out how you can create a more secure financial future.</p>
+          <p><strong>Email: </strong><a href="mailto:m.butler@cba.com.au">andrew.cunich@cba.com.au</a></p>
+          <p><strong>Phone: </strong>+612 9999 9999</p>
+        </div>
+        <div class="span9">
+          <h3>Andrew Cunich</h3>
+          <p>Andrew has a passion for investing and takes pride in helping his clients to growth their wealth in a proactive manner, with a focus on risk minimisation.  He has won prestigious ‘Adviser of the Year Awards’ with two major National Financial Services Licensees and has delivered a number of keynote presentations for industry and public conferences and workshops.</p>
+          <p>Andrew’s experience includes 9 years as a Senior Manager and Adviser with Perpetual. He has gained experience as a Senior Officer with the Insurance and Superannuation Commission, a  Technical Adviser for AMP, the Research and Compliance Manager for Suncorp Life and Superannuation Division and a Principal Research Officer for the Senate Select Committee for Superannuation. </p>
+          <p class="text-right"><a href="mailto:m.butler@cba.com.au" class="btn btn-info";>Email Andrew now</a>&nbsp;&nbsp;</p>
+        </div>
+      </div> <!-- /row -->
     
+    </div>
+
     <!-- Load JS here for greater good =============================-->
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
@@ -156,7 +180,160 @@
     <script src="js/jquery.tagsinput.js"></script>
     <script src="js/jquery.placeholder.js"></script>
     <script src="js/jquery.stacktable.js"></script>
-    <script src="http://vjs.zencdn.net/c/video.js"></script>
+    <!--<script src="http://vjs.zencdn.net/c/video.js"></script>-->
     <script src="js/application.js"></script>
+    <script>
+
+    var rating = 0;
+    var profile = 'conservative';
+
+    if (rating < 3)
+    {
+      profile = 'conservative';
+    } else if (rating < 5)
+    {
+      profile = 'balanced';
+    } else if (rating < 8)
+    {
+      profile = 'growth';
+    } else {
+      profile = 'aggressive';
+    }
+
+    if (profile == 'conservative') 
+    {
+         $('#conservative_text').removeClass('hide');
+         $('.conservativebutton').removeClass('btn-disabled').addClass('btn-success');
+         $('#conservative_pic').attr('src', 'images/demo/conservative.JPG');
+
+         $('#aggressive_text').addClass('hide');
+         $('.aggressivebutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#aggressive_pic').attr('src', 'images/demo/conservativeGS.JPG');
+         $('#balanced_text').addClass('hide');
+         $('.balancedbutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#balanced_pic').attr('src', 'images/demo/balancedGS.JPG');
+         $('#growth_text').addClass('hide');
+         $('.growthbutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#growth_pic').attr('src', 'images/demo/growthGS.JPG');
+    }
+    else if (profile == 'balanced') 
+    {
+         $('#balanced_text').removeClass('hide');
+         $('.balancedbutton').removeClass('btn-disabled').addClass('btn-success');
+         $('#balanced_pic').attr('src', 'images/demo/balanced.JPG');
+
+         $('#aggressive_text').addClass('hide');
+         $('.aggressivebutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#aggressive_pic').attr('src', 'images/demo/aggressiveGS.JPG');
+         $('#growth_text').addClass('hide');
+         $('.growthbutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#growth_pic').attr('src', 'images/demo/growthGS.JPG');
+         $('#conservative_text').addClass('hide');
+         $('.conservativebutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#conservative_pic').attr('src', 'images/demo/conservativeGS.JPG');
+    }
+    else if (profile == 'growth') 
+    {
+         $('#growth_text').removeClass('hide');
+         $('.growthbutton').removeClass('btn-disabled').addClass('btn-success');
+         $('#growth_pic').attr('src', 'images/demo/growth.JPG');
+
+         $('#aggressive_text').addClass('hide');
+         $('.aggressivebutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#aggressive_pic').attr('src', 'images/demo/aggressiveGS.JPG');
+         $('#balanced_text').addClass('hide');
+         $('.balancedbutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#balanced_pic').attr('src', 'images/demo/balancedGS.JPG');
+         $('#conservative_text').addClass('hide');
+         $('.conservativebutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#conservative_pic').attr('src', 'images/demo/conservativeGS.JPG');
+    }
+    else if (profile == 'aggressive') 
+    {
+         $('#aggressive_text').removeClass('hide');
+         $('.aggressivebutton').removeClass('btn-disabled').addClass('btn-success');
+         $('#aggressive_pic').attr('src', 'images/demo/aggressive.JPG');
+
+         $('#growth_text').addClass('hide');
+         $('.growthbutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#growth_pic').attr('src', 'images/demo/growthGS.JPG');
+         $('#balanced_text').addClass('hide');
+         $('.balancedbutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#balanced_pic').attr('src', 'images/demo/balancedGS.JPG');
+         $('#conservative_text').addClass('hide');
+         $('.conservativebutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#conservative_pic').attr('src', 'images/demo/conservativeGS.JPG');
+    }
+
+
+
+
+
+
+
+      $('.aggressivebutton').click(function() {
+         $('#aggressive_text').removeClass('hide');
+         $('.aggressivebutton').removeClass('btn-disabled').addClass('btn-success');
+         $('#aggressive_pic').attr('src', 'images/demo/aggressive.JPG');
+
+         $('#growth_text').addClass('hide');
+         $('.growthbutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#growth_pic').attr('src', 'images/demo/growthGS.JPG');
+         $('#balanced_text').addClass('hide');
+         $('.balancedbutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#balanced_pic').attr('src', 'images/demo/balancedGS.JPG');
+         $('#conservative_text').addClass('hide');
+         $('.conservativebutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#conservative_pic').attr('src', 'images/demo/conservativeGS.JPG');
+      });
+      $('.growthbutton').click(function() {
+         $('#growth_text').removeClass('hide');
+         $('.growthbutton').removeClass('btn-disabled').addClass('btn-success');
+         $('#growth_pic').attr('src', 'images/demo/growth.JPG');
+
+         $('#aggressive_text').addClass('hide');
+         $('.aggressivebutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#aggressive_pic').attr('src', 'images/demo/aggressiveGS.JPG');
+         $('#balanced_text').addClass('hide');
+         $('.balancedbutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#balanced_pic').attr('src', 'images/demo/balancedGS.JPG');
+         $('#conservative_text').addClass('hide');
+         $('.conservativebutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#conservative_pic').attr('src', 'images/demo/conservativeGS.JPG');
+      });
+      $('.balancedbutton').click(function() {
+         $('#balanced_text').removeClass('hide');
+         $('.balancedbutton').removeClass('btn-disabled').addClass('btn-success');
+         $('#balanced_pic').attr('src', 'images/demo/balanced.JPG');
+
+         $('#aggressive_text').addClass('hide');
+         $('.aggressivebutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#aggressive_pic').attr('src', 'images/demo/aggressiveGS.JPG');
+         $('#growth_text').addClass('hide');
+         $('.growthbutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#growth_pic').attr('src', 'images/demo/growthGS.JPG');
+         $('#conservative_text').addClass('hide');
+         $('.conservativebutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#conservative_pic').attr('src', 'images/demo/conservativeGS.JPG');
+      });
+      $('.conservativebutton').click(function() {
+         $('#conservative_text').removeClass('hide');
+         $('.conservativebutton').removeClass('btn-disabled').addClass('btn-success');
+         $('#conservative_pic').attr('src', 'images/demo/conservative.JPG');
+
+         $('#aggressive_text').addClass('hide');
+         $('.aggressivebutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#aggressive_pic').attr('src', 'images/demo/conservativeGS.JPG');
+         $('#balanced_text').addClass('hide');
+         $('.balancedbutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#balanced_pic').attr('src', 'images/demo/balancedGS.JPG');
+         $('#growth_text').addClass('hide');
+         $('.growthbutton').removeClass('btn-success').addClass('btn-disabled');
+         $('#growth_pic').attr('src', 'images/demo/growthGS.JPG');
+      });
+    </script>
+    <script>
+
+    </script>
   </body>
 </html>
